@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dlpruniqe.beststatus">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/applogobackround"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/applogoforground"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="true"
+        android:theme="@style/Theme.EnglishPoetry">
+        <activity
+            android:name="com.dlpruniqe.beststatus.activities.PrivacyPolicyActivity"
+            android:hardwareAccelerated="true"
+            android:exported="true" />
+        <activity
+            android:name="com.dlpruniqe.beststatus.activities.MyStatusActivity"
+            android:hardwareAccelerated="true"
+            android:exported="true" />
+        <activity
+            android:name="com.dlpruniqe.beststatus.activities.LanguageActivity"
+            android:hardwareAccelerated="true"
+            android:exported="true" />
+        <activity
+            android:name="com.dlpruniqe.beststatus.activities.SettingActivity"
+            android:hardwareAccelerated="true"
+            android:exported="true" />
+        <activity
+            android:name="com.dlpruniqe.beststatus.activities.StatusDownloadActivity"
+            android:hardwareAccelerated="true"
+            android:exported="true" />
+        <activity
+            android:name="com.dlpruniqe.beststatus.activities.StatusViewActivity"
+            android:hardwareAccelerated="true"
+            android:exported="true" />
+        <activity
+            android:name="com.dlpruniqe.beststatus.activities.StatusListActivity"
+            android:hardwareAccelerated="true"
+            android:exported="true" />
+        <activity
+            android:name="com.dlpruniqe.beststatus.activities.SplashActivity"
+            android:hardwareAccelerated="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.dlpruniqe.beststatus.activities.MainActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-6994068342680045~3853624764"/>
+
+    </application>
+
+</manifest>

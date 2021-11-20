@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ASUS/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_list_item_1.xml" value="0.246875" />
+        <entry key="..\:/Users/ASUS/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_list_item_2.xml" value="0.246875" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/drawable/bg_1.xml" value="0.275" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/drawable/bg_10.xml" value="0.275" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/drawable/bg_41.xml" value="0.21666666666666667" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/drawable/bg_42.xml" value="0.21666666666666667" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/drawable/custom_others_ripple.xml" value="0.24444444444444444" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/drawable/edittext_backround.xml" value="0.275" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/drawable/toast_backround.xml" value="0.275" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_language.xml" value="0.264" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_main.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_my_status.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_poetry_download.xml" value="0.264" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_poetry_list.xml" value="0.264" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_poetry_view.xml" value="0.264" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_privacy_policy.xml" value="0.264" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_setting.xml" value="0.264" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_splash.xml" value="0.264" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_status_download.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_status_list.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_status_view.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/banner_ads_layout.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/colorpicker_dialog.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/delete_or_cancel_layout.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/delete_or_notdelete_layout.xml" value="0.264" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/edit_include_layout.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/gradient_recyclerview.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/help_layout.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/language_change_layout.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/lay_text_edit.xml" value="0.5619834710743802" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_backround_item.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_backround_recyclerview.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_border.xml" value="0.4" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_crop.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_gradient.xml" value="0.264" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_gradient_item.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_gradient_recyclerview.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_resize_download.xml" value="0.264" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_size.xml" value="0.264" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_text_color.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_text_color_item.xml" value="0.72" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_text_color_item2.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_text_font_item.xml" value="0.264" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/main_content.xml" value="0.264" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/main_item_recycler.xml" value="0.2" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/mystatus_edit_layout.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/mystatus_list_item.xml" value="0.5056433408577878" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/native_ads_item_layout.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/native_ads_layout.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/nav_header.xml" value="0.264" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/poetry_recycler_list.xml" value="0.264" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/progress_layout.xml" value="0.2" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/text_color_layout.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/text_color_picker.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/text_editext_dialog.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/text_edittext_dialog.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/text_font_layout.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/text_size_layout.xml" value="0.4" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/text_style_layout.xml" value="0.264" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/toast_layout.xml" value="0.536" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/menu/nav_menu.xml" value="0.25885416666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

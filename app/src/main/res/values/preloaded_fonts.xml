@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/alike_angular</item>
+        <item>@font/amarante</item>
+        <item>@font/anonymous_pro</item>
+        <item>@font/archivo_narrow</item>
+        <item>@font/carrois_gothic_sc</item>
+        <item>@font/crafty_girls</item>
+        <item>@font/cutive_mono</item>
+        <item>@font/limelight</item>
+        <item>@font/love_ya_like_a_sister</item>
+        <item>@font/meddon</item>
+        <item>@font/monoton</item>
+        <item>@font/neuton_extralight</item>
+        <item>@font/nothing_you_could_do</item>
+        <item>@font/orbitron</item>
+        <item>@font/permanent_marker</item>
+        <item>@font/roboto</item>
+        <item>@font/short_stack</item>
+        <item>@font/sigmar_one</item>
+        <item>@font/smokum</item>
+        <item>@font/special_elite</item>
+        <item>@font/swanky_and_moo_moo</item>
+        <item>@font/unica_one</item>
+        <item>@font/unifrakturmaguntia</item>
+        <item>@font/waiting_for_the_sunrise</item>
+    </array>
+</resources>

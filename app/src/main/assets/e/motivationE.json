@@ -1,0 +1,536 @@
+{
+    "motivationE": [
+        {
+            "id": "1",
+            "p": "Take deep breath\r\nand start again."
+        },
+        {
+            "id": "2",
+            "p": "The secret of getting\r\nahead is getting started."
+        },
+        {
+            "id": "3",
+            "p": "Life is 10% what happens to you\r\nand 90% how you react to it."
+        },
+        {
+            "id": "4",
+            "p": "I will success in life\r\nnot immediately but definitely."
+        },
+        {
+            "id": "5",
+            "p": "Setting goal is the\r\nfirst step in turning the\r\ninvisible into the visible."
+        },
+        {
+            "id": "6",
+            "p": "If you fell down yesterday\r\nstand up today.."
+        },
+        {
+            "id": "7",
+            "p": "Set your goals high\r\nand do not stop\r\ntill you get there.."
+        },
+        {
+            "id": "8",
+            "p": "Only i can change my life\r\nNo one can do it for me.."
+        },
+        {
+            "id": "9",
+            "p": "Change your life today\r\nDo not gamble on your future\r\nact now, without delay."
+        },
+        {
+            "id": "10",
+            "p": "If you can dream it\r\nyou can do it."
+        },
+        {
+            "id": "11",
+            "p": "When you focus on problem\r\nYou will have more problem\r\nWhen you focus on possibilities\r\nYou will have more opportunities.."
+        },
+        {
+            "id": "12",
+            "p": "If you don’t build your own dream,\r\nsomeone will hire you to build theirs."
+        },
+        {
+            "id": "13",
+            "p": "Be good enough to forgive someone,\r\nBut don’t be stupid enough to trust them again."
+        },
+        {
+            "id": "14",
+            "p": "Over-thinking will destroy you."
+        },
+        {
+            "id": "15",
+            "p": "Just because you fail once doesn’t\r\nmean you are gonna fail at everything."
+        },
+        {
+            "id": "16",
+            "p": "Make your move, before they are gone.\r\nBecause people change, and hearts move on."
+        },
+        {
+            "id": "17",
+            "p": "To success in life..\r\nYou need two things..\r\nIgnorance and Confidence.."
+        },
+        {
+            "id": "18",
+            "p": "Don’t be afraid of losing someone\r\nwho doesn’t feel lucky to have you."
+        },
+        {
+            "id": "19",
+            "p": "Sometimes you just need to\r\ndistance yourself from people,\r\nIf they care, they will notice,\r\nif they don’t, you know where you stand."
+        },
+        {
+            "id": "20",
+            "p": "Never chase anyone.\r\nA person who appreciates\r\nyou will walk with you."
+        },
+        {
+            "id": "21",
+            "p": "Sometimes you just have to erase the\r\nmessages delete the numbers and move on."
+        },
+        {
+            "id": "22",
+            "p": "You deserve to have\r\na new start anytime you want.\r\nMove on, let go, start over."
+        },
+        {
+            "id": "23",
+            "p": "Head up, stay strong.\r\nFake a smile, move on."
+        },
+        {
+            "id": "24",
+            "p": "A little girl takes revenge.\r\nA real woman moves on\r\nwhile karma does the dirty work."
+        },
+        {
+            "id": "25",
+            "p": "Never use your eyes to\r\ncry for the one who fooled you,\r\ninstead use it to search for the right one."
+        },
+        {
+            "id": "26",
+            "p": "All of the stupid mistakes\r\nyou have made in the past,\r\nlead you into the person that you are today.\r\nNever regret them."
+        },
+        {
+            "id": "27",
+            "p": "Your dream doesn’t have an expiration date.\r\ntake a deep breath, and try again"
+        },
+        {
+            "id": "28",
+            "p": "Sometimes you need to experience\r\na bad relationship to appreciate a good one."
+        },
+        {
+            "id": "29",
+            "p": "the bravest thing you can do is to keep\r\ngoing when all you want to do is suicide."
+        },
+        {
+            "id": "30",
+            "p": "Never give up on something you really want\r\nit is difficult to wait but more difficult to regret."
+        },
+        {
+            "id": "31",
+            "p": "You cant go back and change the past,\r\nso look to the future and\r\ndon’t make the same mistakes twice."
+        },
+        {
+            "id": "32",
+            "p": "Be with someone who knows\r\nwhat they have when they have you."
+        },
+        {
+            "id": "33",
+            "p": "Be with someone who will realize\r\nwhat they have when they have you,\r\nnot after they have lost you."
+        },
+        {
+            "id": "34",
+            "p": "Forgiveness is an act of self-love."
+        },
+        {
+            "id": "35",
+            "p": "You never lose by loving.\r\nYou always lose by holding back."
+        },
+        {
+            "id": "36",
+            "p": "Never let your tears and sensitivity blind you.\r\nIf someone hurt you,\r\nthey showed you who they are.\r\nMove on, stay strong."
+        },
+        {
+            "id": "37",
+            "p": "Success is a fight between you & yourself."
+        },
+        {
+            "id": "38",
+            "p": "Failures are temporary,\r\nBut success is Permanent.."
+        },
+        {
+            "id": "39",
+            "p": "If you change nothing,\r\nnothing will change."
+        },
+        {
+            "id": "40",
+            "p": "Hard Work + Dream + Dedication = Success."
+        },
+        {
+            "id": "41",
+            "p": "People know you for what you’ve done,\r\nnot for what you plan to do."
+        },
+        {
+            "id": "42",
+            "p": "There is always a little more\r\ntoothpaste in the tube. Think about it."
+        },
+        {
+            "id": "43",
+            "p": "Pearls don’t lie on the sea shore.\r\nIf you want one, you must dive for it."
+        },
+        {
+            "id": "44",
+            "p": "If you believe in yourself, \r\nthings are possible."
+        },
+        {
+            "id": "45",
+            "p": "Motivation is what gets you started.\r\nHabit is what keeps you going."
+        },
+        {
+            "id": "46",
+            "p": "The secret of success is to know\r\nsomething nobody else knows."
+        },
+        {
+            "id": "47",
+            "p": "The harder you fall,\r\nthe higher you bounce."
+        },
+        {
+            "id": "48",
+            "p": "Great things never come \r\nfrom comfort zones."
+        },
+        {
+            "id": "49",
+            "p": "“Dreams is not what you see in sleep\r\nis the thing which doesn’t let you sleep”"
+        },
+        {
+            "id": "50",
+            "p": "If you would create something,\r\nyou must be something."
+        },
+        {
+            "id": "51",
+            "p": "The power of imagination makes us infinite."
+        },
+        {
+            "id": "52",
+            "p": "Start where you are.\r\nUse what you have.\r\nDo what you can."
+        },
+        {
+            "id": "53",
+            "p": "If you dream it, you can do it."
+        },
+        {
+            "id": "54",
+            "p": "Do or Die…There is no try."
+        },
+        {
+            "id": "55",
+            "p": "Take a deep breath and start again."
+        },
+        {
+            "id": "56",
+            "p": "If you don’t ask, \r\nyou don’t get."
+        },
+        {
+            "id": "57",
+            "p": "“SUCCESS” is depends on 2nd letter."
+        },
+        {
+            "id": "58",
+            "p": "Find someone who can change your life,\r\nnot your relationship status."
+        },
+        {
+            "id": "59",
+            "p": "Failure is the opportunity\r\nto begin again more intelligently."
+        },
+        {
+            "id": "60",
+            "p": "Never stop chasing your dreams."
+        },
+        {
+            "id": "61",
+            "p": "If someone in your life makes you forget\r\nyour past that someone is surely your future."
+        },
+        {
+            "id": "62",
+            "p": "Accept that you have lost,\r\nbut never accept that you have failed."
+        },
+        {
+            "id": "63",
+            "p": "Self-trust is the first secret of success."
+        },
+        {
+            "id": "64",
+            "p": "The best preparation for tomorrow\r\nis doing your best today."
+        },
+        {
+            "id": "65",
+            "p": "Never give up. \r\nGreat things take time."
+        },
+        {
+            "id": "66",
+            "p": "Follow your heart but take your brain with you."
+        },
+        {
+            "id": "67",
+            "p": "If You Can Dream It,\r\n You Can Do It ."
+        },
+        {
+            "id": "68",
+            "p": "Quiet people have the loudest minds."
+        },
+        {
+            "id": "69",
+            "p": "Mistakes are good,\r\nbut improved mistakes is success."
+        },
+        {
+            "id": "70",
+            "p": "History is made by those\r\nwho Break The Rules."
+        },
+        {
+            "id": "71",
+            "p": "Don’t be violent be silent and show your talent.."
+        },
+        {
+            "id": "72",
+            "p": "Hard work is never lost."
+        },
+        {
+            "id": "73",
+            "p": "Sometimes, the wrong choices\r\ntake us to the right places."
+        },
+        {
+            "id": "74",
+            "p": "To success in life,\r\nyou need two things:\r\nIgnorance and Confidence."
+        },
+        {
+            "id": "75",
+            "p": "Be a star and show them that you are."
+        },
+        {
+            "id": "76",
+            "p": "Progress is impossible without change,\r\nand those who cannot change their minds,\r\ncan’t change anything."
+        },
+        {
+            "id": "77",
+            "p": "Don’t regret the past.\r\nJust make sure you\r\nchoose right in the future!"
+        },
+        {
+            "id": "78",
+            "p": "Defeat your enemies with your success."
+        },
+        {
+            "id": "79",
+            "p": "To shine like the sun,\r\nyou need to burn like one."
+        },
+        {
+            "id": "80",
+            "p": "Work until you don’t\r\nhave to introduce yourself."
+        },
+        {
+            "id": "81",
+            "p": "One day i really want to say- i made it."
+        },
+        {
+            "id": "82",
+            "p": "Work hard in silence &\r\nlet the success make noise."
+        },
+        {
+            "id": "83",
+            "p": "Don’t tell people your dreams, Show Them!"
+        },
+        {
+            "id": "84",
+            "p": "You don’t need everything to enjoy life.\r\nYou already have life to enjoy everything ????"
+        },
+        {
+            "id": "85",
+            "p": "You don’t need everything to enjoy life.\r\nYou already have life to enjoy everything ????"
+        },
+        {
+            "id": "86",
+            "p": "The worst mistakes in life are\r\nthe ones you never learn from."
+        },
+        {
+            "id": "87",
+            "p": "God puts people in your life for a reason and\r\nremoves them from your life for a better reason."
+        },
+        {
+            "id": "88",
+            "p": "Life is Rough so be Tough."
+        },
+        {
+            "id": "89",
+            "p": "Life is a tragedy when seen in close-up,\r\nbut a comedy in long shot."
+        },
+        {
+            "id": "90",
+            "p": "Oh life! You are so beautiful,\r\na bit complicated but still beautiful!"
+        },
+        {
+            "id": "91",
+            "p": "We spend most of our lives\r\nconjugating three verbs:\r\nto want, to have, and to do."
+        },
+        {
+            "id": "92",
+            "p": "I have promised to live my life\r\nas a revolution and\r\nnot just a process of evolution."
+        },
+        {
+            "id": "93",
+            "p": "To be what we are,\r\nand to become what\r\nwe are capable of becoming,\r\nis the only end of life."
+        },
+        {
+            "id": "94",
+            "p": "Life has got to be lived –\r\nthat’s all there is to it."
+        },
+        {
+            "id": "95",
+            "p": "Life isn’t fair. \r\nIt’s just fairer than death, that’s all."
+        },
+        {
+            "id": "96",
+            "p": "Never take life seriously.\r\nNobody gets out alive anyways."
+        },
+        {
+            "id": "97",
+            "p": "Sport and life is about losing.\r\nIt’s about understanding how to lose."
+        },
+        {
+            "id": "98",
+            "p": "The tragedy of life is not that man loses,\r\nbut that he almost wins."
+        },
+        {
+            "id": "99",
+            "p": "Life is what you make of it.\r\nAlways has been, always will be."
+        },
+        {
+            "id": "100",
+            "p": "Life is not measured by the breaths you take,\r\nbut by its breathtaking moments."
+        },
+        {
+            "id": "101",
+            "p": "Every smile is a sign of daily brushing!"
+        },
+        {
+            "id": "102",
+            "p": "When I hear somebody sigh, “Life is hard,”\r\nI am always tempted to ask, “Compared to what?”"
+        },
+        {
+            "id": "103",
+            "p": "Life isn’t what you want it to be,\r\nit’s what you make it become."
+        },
+        {
+            "id": "104",
+            "p": "Every tear is a sign of Onions!"
+        },
+        {
+            "id": "105",
+            "p": "Life is simple! \r\nDon’t make it complex!"
+        },
+        {
+            "id": "106",
+            "p": "Every silence is a sin of zero balance!"
+        },
+        {
+            "id": "107",
+            "p": "Once in a while,\r\nright in the middle of an ordinary life,\r\nlove gives us a fairy tale."
+        },
+        {
+            "id": "108",
+            "p": "Every story has an end,\r\nbut in life every ending\r\nis just a new beginning."
+        },
+        {
+            "id": "109",
+            "p": "Half of life is ****ing up –\r\nthe other half is dealing with it."
+        },
+        {
+            "id": "110",
+            "p": "There are no mistakes in life, only lessons."
+        },
+        {
+            "id": "111",
+            "p": "Just hit play and watch my life fall apart."
+        },
+        {
+            "id": "112",
+            "p": "Don’t let the darkness of the past\r\ncover the brightness of the future."
+        },
+        {
+            "id": "113",
+            "p": "At times I wish I could change the past..\r\nbut sometimes the past changes you."
+        },
+        {
+            "id": "114",
+            "p": "The times in life,\r\nthat seems to be the worst,\r\nalways turn out for the best!"
+        },
+        {
+            "id": "115",
+            "p": "If it happens, God lets it happen,\r\nand when we say, \r\nI don’t understand,\r\nGod replies,\r\n I don’t care."
+        },
+        {
+            "id": "116",
+            "p": "When life locks you in your room,\r\nsimply go out the window."
+        },
+        {
+            "id": "117",
+            "p": "Life is like a coin,\r\nyou can spend it anyway you\r\nwant but you can only spend it once."
+        },
+        {
+            "id": "118",
+            "p": "If God brings you to it,\r\nHe will bring you through it."
+        },
+        {
+            "id": "119",
+            "p": "Life isn’t about waiting for the storm to pass…\r\nIt is all about dancing in the rain!"
+        },
+        {
+            "id": "120",
+            "p": "The greatest risk in life is not taking one."
+        },
+        {
+            "id": "121",
+            "p": "Rock bottom is good solid ground,\r\nand a dead end street is\r\njust a place to turn around."
+        },
+        {
+            "id": "122",
+            "p": "You only live once, \r\nso do everything twice."
+        },
+        {
+            "id": "123",
+            "p": "Every new day is another\r\nchance to change your life."
+        },
+        {
+            "id": "124",
+            "p": "Life is too short for fake butter,\r\nfake cheese, \r\nor fake people."
+        },
+        {
+            "id": "125",
+            "p": "I’m not interested in the PG-version of life."
+        },
+        {
+            "id": "126",
+            "p": "Unplanned moments are always\r\nbetter than planned ones."
+        },
+        {
+            "id": "127",
+            "p": "Just because your life isn’t like\r\nwhat you want it to be,\r\ndoesn’t mean you can’t enjoy it."
+        },
+        {
+            "id": "128",
+            "p": "Life is like riding a bicycle.\r\nTo keep your balance,\r\nyou must keep moving."
+        },
+        {
+            "id": "129",
+            "p": "Life is full of surprises,\r\nbut you have to open\r\nthem hoping for the very best."
+        },
+        {
+            "id": "130",
+            "p": "The sun is somewhere\r\nshining even when it rains."
+        },
+        {
+            "id": "131",
+            "p": "It takes both rain and\r\nsunshine to make a rainbow."
+        },
+        {
+            "id": "132",
+            "p": "Don’t complain about your life\r\nwhen you are the one who is handling it."
+        },
+        {
+            "id": "133",
+            "p": "Defeat is not defeat unless accepted\r\nas a reality-in your own mind."
+        }
+    ]
+}

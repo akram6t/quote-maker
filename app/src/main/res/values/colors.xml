@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="halfblack">#563E65</color>
+    <color name="halfwhite">#FFDCEA</color>
+    <color name="transparent">#00000000</color>
+    <color name="whitetransparent">#41FFFFFF</color>
+    <color name="statusbarcolor">#12000000</color>
+    <color name="transparentwhite">#0DFFFFFF</color>
+    <color name="wrongrightcolor">#1A000000</color>
+
+    <color name="nav_home_start">#B3CF7A9C</color>
+    <color name="nav_home_end">#B3BA89D8</color>
+    <color name="nav_saved_start">#B3E3C4D1</color>
+    <color name="nav_saved_end">#B3D6BE96</color>
+
+    <color name="social_ripple_color">#B395C5</color>
+    <color name="clickhold">#4D0E0E0E</color>
+
+    <color name="statuscolor1">#000000</color>
+    <color name="statuscolor2">#4C27A5</color>
+    <color name="statuscolor3">#D35351</color>
+    <color name="statuscolor4">#390B50</color>
+    <color name="statuscolor5">#181818</color>
+    <color name="statuscolor6">#141517</color>
+    <color name="statuscolor7">#1C2757</color>
+    <color name="statuscolor8">#24384A</color>
+    <color name="statuscolor9">#1F1C18</color>
+
+    <color name="navcolor1">#323232</color>
+    <color name="navcolor2">#4C27A5</color>
+    <color name="navcolor3">#D13C38</color>
+    <color name="navcolor4">#954475</color>
+    <color name="navcolor5">#9C7400</color>
+    <color name="navcolor6">#5D8010</color>
+    <color name="navcolor7">#B87589</color>
+    <color name="navcolor8">#2C88C6</color>
+    <color name="navcolor9">#800D00</color>
+
+</resources>

@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">MS Status</string>
+    <string name="langhindi">hindi</string>
+    <string name="langenglish">english</string>
+
+    <string name="hindistatus">Hindi Status</string>
+    <string name="englishstatus">English Status</string>
+
+    <string name="valueHindi">hindistatuskeyofvalue</string>
+    <string name="valueEnglish">englishstatuskeyofvalue</string>
+
+    <string name="statuslangtitle">We will provide many types of status And you Create your own Status </string>
+    <string name="privacyPolicytext">privacy policy</string>
+
+    <string name="dbLang">DatabaseofLang</string>
+    <string name="dbTheme">DatabaseofTheme</string>
+    <string name="dbfont">DatabaseofFont</string>
+
+    <string name="privacypolicylink">https://sites.google.com/view/akram-khan-privacy-policy</string>
+
+    <string name="langKey">languageKey</string>
+    <string name="backroundKey">themeKey</string>
+    <string name="fontKey">fontKey</string>
+    <string name="createStatusKey">CreateStatusKey</string>
+    <string name="createStatusValue">CreateStatusValue</string>
+    <string name="create_your_status">Create Your Status</string>
+    <string name="savedatainroom">Saved in MyStatus</string>
+    <string name="delete_layout_message">You Are Ready to Delete this Status</string>
+    <string name="delete_layout_title">Delete</string>
+    <string name="backMessage">Do You Want to Exit</string>
+    <string name="updateinmyStatus">successfully Update in MyStatus</string>
+    <string name="editsdata">editsdataKey</string>
+    <string name="editsKey">editsboolianKey</string>
+    <string name="ismystatus">ismystatus</string>
+    <string name="mystatustext">ismystatustext</string>
+    <string name="playstorelink">https://play.google.com/store/apps/details?id=</string>
+    <string name="sharetext">Download this App 👇👇👇\nbest Status App \nYou can create any Status \n \n</string>
+    <string name="my_status">My Status</string>
+    <string name="no_status_found">No Status Found</string>
+    <string name="copy">Copy</string>
+    <string name="share">Share</string>
+    <string name="download">Download</string>
+    <string name="fanny_poetry">Fanny Poetry</string>
+    <string name="text">Text</string>
+    <string name="gradient">Gradient</string>
+    <string name="backround">Backround</string>
+    <string name="border">Border</string>
+    <string name="size">Size</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="settings">Settings</string>
+    <string name="theme">Theme</string>
+    <string name="applied">Applied</string>
+    <string name="fonts">fonts</string>
+    <string name="status_language">Status Language</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="_100">100</string>
+    <string name="full_size">Full Size</string>
+    <string name="automatic">Automatic</string>
+    <string name="fonts_cap">Fonts</string>
+    <string name="todo">TODO</string>
+    <string name="this_is_poetry_lines">this is poetry lines</string>
+    <string name="_12_23_2004">12/23/2004</string>
+    <string name="best_poetry_in_english">Best Poetry in English</string>
+    <string name="home">Home</string>
+    <string name="others">Others</string>
+
+    <string name="bannerAds">ca-app-pub-6994068342680045/4424470401</string>
+    <string name="interestialAds">ca-app-pub-6994068342680045/1606735373</string>
+    <string name="rewardedAds">ca-app-pub-6994068342680045/9541065715</string>
+
+    <string name="social_media">Social Media</string>
+    <string name="share_cap">share</string>
+    <string name="rating">Rating</string>
+    <string name="converting">Converting…</string>
+    <string name="normal">Normal</string>
+    <string name="italic">Italic</string>
+    <string name="bold">Bold</string>
+    <string name="italic_cles">italic/</string>
+    <string name="bold_cles">Bold</string>
+    <string name="this_is_toast">THis is Toast</string>
+    <string name="myyoutube">https://www.youtube.com/channel/UCvyktIUuYzZaTWCJzPrz7qA</string>
+    <string name="myinstagram">https://www.instagram.com/akram6t/</string>
+
+</resources>

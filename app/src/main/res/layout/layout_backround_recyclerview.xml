@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/clickhold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/backroundWrong"
+        android:layout_width="50dp"
+        android:layout_height="64dp"
+        android:background="@color/wrongrightcolor"
+        android:paddingStart="5dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="20dp"
+        android:src="@drawable/icon_wrong"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/backroundRight"
+        android:layout_width="50dp"
+        android:layout_height="64dp"
+        android:background="@color/wrongrightcolor"
+        android:paddingStart="5dp"
+        android:paddingTop="17dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="17dp"
+        android:src="@drawable/icon_right"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/idbackroundaddImage"
+        android:layout_width="50dp"
+        android:layout_height="64dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        app:tint="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintStart_toEndOf="@id/backroundWrong"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/divider6"
+        android:src="@drawable/icon_more_gradient"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/backroundRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/divider6"
+        app:layout_constraintEnd_toStartOf="@+id/backroundRight"
+        app:layout_constraintStart_toEndOf="@+id/idbackroundaddImage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/layout_backround_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>

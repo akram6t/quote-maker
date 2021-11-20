@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/clickhold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/textsizewrong"
+        android:layout_width="50dp"
+        android:layout_height="64dp"
+        android:background="@color/wrongrightcolor"
+        android:paddingStart="5dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="20dp"
+        android:src="@drawable/icon_wrong"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/textsizeright"
+        android:layout_width="50dp"
+        android:layout_height="64dp"
+        android:background="@color/wrongrightcolor"
+        android:paddingStart="5dp"
+        android:paddingTop="17dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="17dp"
+        android:src="@drawable/icon_right"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/textsizeSeekbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:theme="@style/Theme.EnglishPoetry.SeekBar"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
+        app:layout_constraintEnd_toStartOf="@+id/textsizeright"
+        app:layout_constraintStart_toEndOf="@+id/textsizewrong"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textsizetextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="12"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/textsizeSeekbar"
+        app:layout_constraintStart_toStartOf="@+id/textsizeSeekbar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

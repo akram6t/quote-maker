@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "148830344499",
+    "project_id": "status-hindi-english-play",
+    "storage_bucket": "status-hindi-english-play.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148830344499:android:695bf1fad3ae0777001a46",
+        "android_client_info": {
+          "package_name": "com.dlpruniqe.beststatus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148830344499-oqfqtp8n8jcru5gci6j599ibldioabob.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBknlvrSvLvCKaSavnvD77cEmB4uJgDXXs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148830344499-oqfqtp8n8jcru5gci6j599ibldioabob.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_back"
+    tools:context=".activities.SettingActivity">
+
+    <LinearLayout
+        android:id="@+id/bannersetlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/sadView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/bannerAds">
+        </com.google.android.gms.ads.AdView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/statusbarcolor"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/statusbarcolor"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+        <ImageView
+            android:id="@+id/idsetbackarrow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/custom_social_ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="10dp"
+            app:srcCompat="@drawable/icon_back_arrow"
+            app:tint="#FFFFFF"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/idSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/alike_angular"
+            android:gravity="center"
+            android:text="@string/settings"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/bannersetlayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/setting_item_backround"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/btnTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/custom_setting_item_ripple"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp">
+
+                            <TextView
+                                android:id="@+id/textView6456"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:text="@string/theme"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginEnd="5dp"
+                                app:cardCornerRadius="100dp"
+                                app:cardElevation="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/themeaeroimage"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <LinearLayout
+                                    android:id="@+id/setthemeback"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/main_back"
+                                    android:orientation="horizontal" />
+                            </androidx.cardview.widget.CardView>
+
+                            <ImageView
+                                android:id="@+id/themeaeroimage"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:alpha="0.3"
+                                android:padding="10dp"
+                                android:src="@drawable/icon_arrow_open"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:id="@+id/themelayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="80dp"
+                                    android:layout_height="100dp"
+                                    android:layout_margin="10dp"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="5dp">
+
+                                    <LinearLayout
+                                        android:id="@+id/btntheme1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/main_back"
+                                        android:gravity="bottom|center_horizontal"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/btnApply1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:layout_marginEnd="5dp"
+                                            android:layout_marginBottom="3dp"
+                                            android:background="@drawable/setting_apply_backround"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:paddingEnd="10dp"
+                                            android:paddingBottom="5dp"
+                                            android:text="@string/applied"
+                                            android:textColor="@color/halfblack"
+                                            android:textSize="8sp"
+                                            android:visibility="gone"
+                                            tools:ignore="SmallSp" />
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="80dp"
+                                    android:layout_height="100dp"
+                                    android:layout_margin="10dp"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="5dp">
+
+                                    <LinearLayout
+                                        android:id="@+id/btntheme2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/backround_2"
+                                        android:gravity="bottom|center_horizontal"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/btnApply2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:layout_marginEnd="5dp"
+                                            android:layout_marginBottom="3dp"
+                                            android:background="@drawable/setting_apply_backround"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:paddingEnd="10dp"
+                                            android:paddingBottom="5dp"
+                                            android:text="@string/applied"
+                                            android:textColor="@color/halfblack"
+                                            android:textSize="8sp"
+                                            android:visibility="gone"
+                                            tools:ignore="SmallSp" />
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="80dp"
+                                    android:layout_height="100dp"
+                                    android:layout_margin="10dp"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="5dp">
+
+                                    <LinearLayout
+                                        android:id="@+id/btntheme3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/backround_3"
+                                        android:gravity="bottom|center_horizontal"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/btnAppy3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:layout_marginEnd="5dp"
+                                            android:layout_marginBottom="3dp"
+                                            android:background="@drawable/setting_apply_backround"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:paddingEnd="10dp"
+                                            android:paddingBottom="5dp"
+                                            android:text="@string/applied"
+                                            android:textColor="@color/halfblack"
+                                            android:textSize="8sp"
+                                            android:visibility="gone"
+                                            tools:ignore="SmallSp" />
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="80dp"
+                                    android:layout_height="100dp"
+                                    android:layout_margin="10dp"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="5dp">
+
+                                    <LinearLayout
+                                        android:id="@+id/btntheme4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/backround_4"
+                                        android:gravity="bottom|center_horizontal"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/btnApply4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:layout_marginEnd="5dp"
+                                            android:layout_marginBottom="3dp"
+                                            android:background="@drawable/setting_apply_backround"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:paddingEnd="10dp"
+                                            android:paddingBottom="5dp"
+                                            android:text="@string/applied"
+                                            android:textColor="@color/halfblack"
+                                            android:textSize="8sp"
+                                            android:visibility="gone"
+                                            tools:ignore="SmallSp" />
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="80dp"
+                                    android:layout_height="100dp"
+                                    android:layout_margin="10dp"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="5dp">
+
+                                    <LinearLayout
+                                        android:id="@+id/btntheme5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/backround_5"
+                                        android:gravity="bottom|center_horizontal"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/btnApply5"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:layout_marginEnd="5dp"
+                                            android:layout_marginBottom="3dp"
+                                            android:background="@drawable/setting_apply_backround"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:paddingEnd="10dp"
+                                            android:paddingBottom="5dp"
+                                            android:text="@string/applied"
+                                            android:textColor="@color/halfblack"
+                                            android:textSize="8sp"
+                                            android:visibility="gone"
+                                            tools:ignore="SmallSp" />
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="80dp"
+                                    android:layout_height="100dp"
+                                    android:layout_margin="10dp"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="5dp">
+
+                                    <LinearLayout
+                                        android:id="@+id/btntheme6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/backround_6"
+                                        android:gravity="bottom|center_horizontal"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/btnApply6"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:layout_marginEnd="5dp"
+                                            android:layout_marginBottom="3dp"
+                                            android:background="@drawable/setting_apply_backround"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:paddingEnd="10dp"
+                                            android:paddingBottom="5dp"
+                                            android:text="@string/applied"
+                                            android:textColor="@color/halfblack"
+                                            android:textSize="8sp"
+                                            android:visibility="gone"
+                                            tools:ignore="SmallSp" />
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="80dp"
+                                    android:layout_height="100dp"
+                                    android:layout_margin="10dp"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="5dp">
+
+                                    <LinearLayout
+                                        android:id="@+id/btntheme7"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/backround_7"
+                                        android:gravity="bottom|center_horizontal"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/btnApply7"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:layout_marginEnd="5dp"
+                                            android:layout_marginBottom="3dp"
+                                            android:background="@drawable/setting_apply_backround"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:paddingEnd="10dp"
+                                            android:paddingBottom="5dp"
+                                            android:text="@string/applied"
+                                            android:textColor="@color/halfblack"
+                                            android:textSize="8sp"
+                                            android:visibility="gone"
+                                            tools:ignore="SmallSp" />
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="80dp"
+                                    android:layout_height="100dp"
+                                    android:layout_margin="10dp"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="5dp">
+
+                                    <LinearLayout
+                                        android:id="@+id/btntheme8"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/backround_8"
+                                        android:gravity="bottom|center_horizontal"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/btnApply8"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:layout_marginEnd="5dp"
+                                            android:layout_marginBottom="3dp"
+                                            android:background="@drawable/setting_apply_backround"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:paddingEnd="10dp"
+                                            android:paddingBottom="5dp"
+                                            android:text="@string/applied"
+                                            android:textColor="@color/halfblack"
+                                            android:textSize="8sp"
+                                            android:visibility="gone"
+                                            tools:ignore="SmallSp" />
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="80dp"
+                                    android:layout_height="100dp"
+                                    android:layout_margin="10dp"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="5dp">
+
+                                    <LinearLayout
+                                        android:id="@+id/btntheme9"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/backround_9"
+                                        android:gravity="bottom|center_horizontal"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/btnApply9"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:layout_marginEnd="5dp"
+                                            android:layout_marginBottom="3dp"
+                                            android:background="@drawable/setting_apply_backround"
+                                            android:paddingStart="10dp"
+                                            android:paddingTop="5dp"
+                                            android:paddingEnd="10dp"
+                                            android:paddingBottom="5dp"
+                                            android:text="@string/applied"
+                                            android:textColor="@color/halfblack"
+                                            android:textSize="8sp"
+                                            android:visibility="gone"
+                                            tools:ignore="SmallSp" />
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/setting_item_backround"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/btnFonts"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/custom_setting_item_ripple"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp">
+
+                            <ImageView
+                                android:id="@+id/fontaeroimage"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:alpha="0.3"
+                                android:padding="10dp"
+                                android:src="@drawable/icon_arrow_open"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textfonts"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:fontFamily="@font/anonymous_pro"
+                                android:gravity="center"
+                                android:text="@string/fonts"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/fontaeroimage"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textVie6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:text="@string/fonts"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:id="@+id/fontslayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp"
+                            tools:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/font1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/setting_font_back_default"
+                                    android:fontFamily="@font/anonymous_pro"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/fonts"
+                                    android:textColor="@color/halfblack" />
+
+                                <TextView
+                                    android:id="@+id/font2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/setting_font_back_default"
+                                    android:fontFamily="@font/amarante"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/fonts"
+                                    android:textColor="@color/halfblack" />
+
+                                <TextView
+                                    android:id="@+id/font3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/setting_font_back_default"
+                                    android:fontFamily="@font/love_ya_like_a_sister"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/fonts"
+                                    android:textColor="@color/halfblack" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/font4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/setting_font_back_default"
+                                    android:fontFamily="@font/alike_angular"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/fonts" />
+
+                                <TextView
+                                    android:id="@+id/font5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/setting_font_back_default"
+                                    android:fontFamily="@font/special_elite"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/fonts" />
+
+                                <TextView
+                                    android:id="@+id/font6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/setting_font_back_default"
+                                    android:fontFamily="@font/short_stack"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:text="@string/fonts" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/setting_item_backround"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/btnlanguage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/custom_setting_item_ripple"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp">
+
+                            <ImageView
+                                android:id="@+id/lanaeroimage"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:alpha="0.3"
+                                android:padding="10dp"
+                                android:src="@drawable/icon_arrow_open"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textlang"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:gravity="center"
+                                android:text="hindi"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/lanaeroimage"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textVie456"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:text="@string/status_language"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lnaguagelayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/changeHindi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/setting_font_back_default"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/hindistatus"
+                                android:textColor="@color/halfblack" />
+
+                            <TextView
+                                android:id="@+id/changeEnglish"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/setting_font_back_default"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="@string/englishstatus"
+                                android:textColor="@color/halfblack" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
