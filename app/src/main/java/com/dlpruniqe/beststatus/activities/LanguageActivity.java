@@ -25,6 +25,14 @@ public class LanguageActivity extends AppCompatActivity {
         animations();
         sharedprefrence();
         getsharedPrefrence();
+
+        binding.idprivacy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LanguageActivity.this, PrivacyPolicyActivity.class));
+            }
+        });
+
     }
 
     private void sharedprefrence(){
@@ -87,13 +95,7 @@ public class LanguageActivity extends AppCompatActivity {
         SharedPreferences getfirstref = getSharedPreferences("firsttime", MODE_PRIVATE);
         boolean getfirsttime = getfirstref.getBoolean("firsttime", true);
 
-        SharedPreferences getthemeprefrence = getSharedPreferences(getString(R.string.dbTheme), MODE_PRIVATE);
-        String themes = getthemeprefrence.getString(getString(R.string.backroundKey), "theme1");
-
-        SharedPreferences getsrd = getSharedPreferences(getString(R.string.dbLang), MODE_PRIVATE);
-        String languages = getsrd.getString(getString(R.string.langKey), getString(R.string.langhindi));
-
-        if (getfirsttime==false){
+        if (!getfirsttime){
             Intent screenIntent = new Intent(LanguageActivity.this, MainActivity.class);
             startActivity(screenIntent);
             finish();

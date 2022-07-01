@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "148830344499",
-    "project_id": "status-hindi-english-play",
-    "storage_bucket": "status-hindi-english-play.appspot.com"
+    "project_number": "460687170438",
+    "project_id": "shayariapp-74675",
+    "storage_bucket": "shayariapp-74675.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:148830344499:android:695bf1fad3ae0777001a46",
+        "mobilesdk_app_id": "1:460687170438:android:e408803d8370005d116a07",
         "android_client_info": {
           "package_name": "com.dlpruniqe.beststatus"
         }
       },
       "oauth_client": [
         {
-          "client_id": "148830344499-oqfqtp8n8jcru5gci6j599ibldioabob.apps.googleusercontent.com",
+          "client_id": "460687170438-0opftt1dlapirl4iu4bcpscpvs5tevuh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dlpruniqe.beststatus",
+            "certificate_hash": "5fe4e025309a9f1c93b8d70876fe442ab7d37078"
+          }
+        },
+        {
+          "client_id": "460687170438-hpjhast1m3jhr8m72kac807qop3bfq9i.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBknlvrSvLvCKaSavnvD77cEmB4uJgDXXs"
+          "current_key": "AIzaSyBFw9qTdWI95yFDDTnDqAiqkFEElaYSyxE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "148830344499-oqfqtp8n8jcru5gci6j599ibldioabob.apps.googleusercontent.com",
+              "client_id": "460687170438-hpjhast1m3jhr8m72kac807qop3bfq9i.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

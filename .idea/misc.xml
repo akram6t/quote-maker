@@ -21,7 +21,7 @@
         <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_privacy_policy.xml" value="0.264" />
         <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_setting.xml" value="0.264" />
         <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_splash.xml" value="0.264" />
-        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_status_download.xml" value="0.25885416666666666" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_status_download.xml" value="0.2" />
         <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_status_list.xml" value="0.25885416666666666" />
         <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/activity_status_view.xml" value="0.25885416666666666" />
         <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/banner_ads_layout.xml" value="0.25885416666666666" />
@@ -35,7 +35,7 @@
         <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/lay_text_edit.xml" value="0.5619834710743802" />
         <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_backround_item.xml" value="0.25885416666666666" />
         <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_backround_recyclerview.xml" value="0.25885416666666666" />
-        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_border.xml" value="0.4" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_border.xml" value="0.264" />
         <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_crop.xml" value="0.25885416666666666" />
         <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_gradient.xml" value="0.264" />
         <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_gradient_item.xml" value="0.25885416666666666" />
@@ -46,6 +46,7 @@
         <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_text_color_item.xml" value="0.72" />
         <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_text_color_item2.xml" value="0.25885416666666666" />
         <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_text_font_item.xml" value="0.264" />
+        <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/layout_update.xml" value="0.2" />
         <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/main_content.xml" value="0.264" />
         <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/main_item_recycler.xml" value="0.2" />
         <entry key="..\:/android studio project/EnglishPoetry/app/src/main/res/layout/mystatus_edit_layout.xml" value="0.25885416666666666" />

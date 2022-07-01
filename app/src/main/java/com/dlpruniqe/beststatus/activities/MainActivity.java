@@ -1,49 +1,57 @@
 package com.dlpruniqe.beststatus.activities;
 
-import androidx.appcompat.app.AlertDialog;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.appcompat.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.LayoutInflater;
 import android.view.View;
+import com.dlpruniqe.beststatus.BuildConfig;
 import com.dlpruniqe.beststatus.R;
 import com.dlpruniqe.beststatus.adapters.MainAdapters;
 import com.dlpruniqe.beststatus.databinding.HelpLayoutBinding;
+import com.dlpruniqe.beststatus.databinding.LayoutUpdateBinding;
 import com.dlpruniqe.beststatus.databinding.MainContentBinding;
 import com.dlpruniqe.beststatus.databinding.NavHeaderBinding;
 import com.dlpruniqe.beststatus.models.MainModels;
+import com.dlpruniqe.beststatus.other.GetAllGradient;
 import com.dlpruniqe.beststatus.other.HelpTextViewText;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     private MainContentBinding mbinding;
     private DrawerLayout drawerLayout;
-    private MainModels mainModels;
     private NavigationView navigationView;
     private NavHeaderBinding hbinding;
     private String gettheme;
-    AlertDialog helpDialog;
+    private AlertDialog helpDialog;
+    private AlertDialog updateDialog;
+    private DatabaseReference database;
+    private int versionCode;
+    private String updateDesc;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        database = FirebaseDatabase.getInstance().getReference();
+        getfirebasedata();
+
         navigationView = findViewById(R.id.navigationView);
-
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-
-            }
-        });
 
         drawerLayout = findViewById(R.id.drawerLayout);
         View mview = findViewById(R.id.maincontent);
@@ -294,6 +302,55 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void getfirebasedata(){
+        View dialogView = LayoutInflater.from(MainActivity.this).inflate(R.layout.layout_update, null);
+        LayoutUpdateBinding dialogViewBinding = LayoutUpdateBinding.bind(dialogView);
+
+        updateDialog = new AlertDialog.Builder(this)
+                .setView(dialogView)
+                .create();
+        updateDialog.getWindow().setBackgroundDrawableResource(R.color.transparent);
+
+        dialogViewBinding.btnUpdateDialogClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updateDialog.dismiss();
+            }
+        });
+
+        dialogViewBinding.updateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String googleplayLink = getString(R.string.playstorelink)+getPackageName();
+                try {
+                    Intent rintent = new Intent(Intent.ACTION_VIEW, Uri.parse(googleplayLink));
+                    startActivity(rintent);
+                }catch (Exception e){
+                    e.printStackTrace();
+
+                }
+            }
+        });
+
+        database.child("settings").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (task.isSuccessful()){
+                    versionCode = Integer.parseInt(task.getResult().child("versioncode").getValue().toString());
+                    updateDesc = task.getResult().child("updatedesc").getValue().toString();
+                    if (BuildConfig.VERSION_CODE != versionCode){
+                        dialogViewBinding.updateDescription.setText(Html.fromHtml(updateDesc));
+                        GetAllGradient getAllGradient = new GetAllGradient();
+                        Random random = new Random();
+                        int rand = random.nextInt(getAllGradient.getGradientArray().length);
+                        dialogViewBinding.updateDialogBackground.setBackgroundResource(getAllGradient.getGradientArray()[rand]);
+                        updateDialog.show();
+                    }
+                }
+            }
+        });
     }
 
 }

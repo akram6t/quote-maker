@@ -10,12 +10,15 @@ import android.os.Handler;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.TextView;
+import com.dlpruniqe.beststatus.BuildConfig;
 import com.dlpruniqe.beststatus.R;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
     private String gettheme;
     private ConstraintLayout parentsplashLayout;
+    private TextView versionName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +27,12 @@ public class SplashActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         parentsplashLayout = findViewById(R.id.splashparentLayout);
+        versionName = findViewById(R.id.sp_version_name);
 
         getsharedprefrence();
         themesettingsharedprefrencechack();
+
+        versionName.setText(BuildConfig.VERSION_NAME);
 
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.zoom_anim);
         findViewById(R.id.imageView2).setAnimation(animation);

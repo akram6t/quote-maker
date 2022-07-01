@@ -1,6 +1,5 @@
 package com.dlpruniqe.beststatus.activities;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -55,12 +54,6 @@ import com.dlpruniqe.beststatus.other.GetAllFonts;
 import com.dlpruniqe.beststatus.other.GetAllGradient;
 import com.dlpruniqe.beststatus.other.ViewToUriConverter;
 import com.dlpruniqe.beststatus.other.getAllColors;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
@@ -94,8 +87,8 @@ public class StatusViewActivity extends AppCompatActivity {
     private int defaulttext_color = Color.parseColor("#ffffff");
     private int defaulttext_size = 20;
     private int default_borderpadding;
-    private LinearLayout.LayoutParams default_params;
     private int okbordercolor;
+    private LinearLayout.LayoutParams default_params;
     private Typeface defaulttextfont_typface;
     private Typeface defaulttextstyle_font;
     private Drawable default_gradient;
@@ -117,11 +110,6 @@ public class StatusViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityStatusViewBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        MobileAds.initialize(this);
-        AdView vadView = findViewById(R.id.vadView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        vadView.loadAd(adRequest);
 
         getsharedprefrence();
         themesettingsharedprefrencechack();
@@ -189,7 +177,7 @@ public class StatusViewActivity extends AppCompatActivity {
                 Uri doneImageUri = viewtoUri.getImageuri();
                 Intent intent = new Intent(StatusViewActivity.this, StatusDownloadActivity.class);
                 intent.putExtra("poetryname", binding.inclay.mainTextPoetry.getText().toString());
-                intent.putExtra("imageuri", doneImageUri.toString());
+                intent.putExtra("imageuri", doneImageUri);
                 startActivity(intent);
                 progressDialog.dismiss();
                 onBackpressed = true;
@@ -204,7 +192,6 @@ public class StatusViewActivity extends AppCompatActivity {
                     isdataSaved = false;
                 }
                 if (!isdataSaved) {
-                    loadinterstitialads();
                         SQlHelper sQlHelper = new SQlHelper(StatusViewActivity.this);
                         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yy");
                         String date = simpleDateFormat.format(new Date());
@@ -517,7 +504,7 @@ public class StatusViewActivity extends AppCompatActivity {
 
         textSizeLayoutBinding = TextSizeLayoutBinding.inflate(getLayoutInflater());
         float gettextsize = binding.inclay.mainTextPoetry.getTextSize();
-        textSizeLayoutBinding.textsizeSeekbar.setMax(40);
+        textSizeLayoutBinding.textsizeSeekbar.setMax(50);
         textSizeLayoutBinding.textsizeSeekbar.setProgress(20);
         textSizeLayoutBinding.textsizetextView.setText(String.valueOf(20));
 
@@ -1079,25 +1066,6 @@ public class StatusViewActivity extends AppCompatActivity {
         }else {
             finish();
         }
-    }
-
-    private void loadinterstitialads() {
-        AdRequest adRequest = new AdRequest.Builder().build();
-        InterstitialAd.load(this, getString(R.string.interestialAds), adRequest,
-                new InterstitialAdLoadCallback() {
-                    @Override
-                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                        // The mInterstitialAd reference will be null until
-                        // an ad is loaded.
-                        interstitialAd.show(StatusViewActivity.this);
-                    }
-
-                    @Override
-                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                        // Handle the error
-                        Toast.makeText(StatusViewActivity.this, loadAdError.toString(), Toast.LENGTH_SHORT).show();
-                    }
-                });
     }
 
 }

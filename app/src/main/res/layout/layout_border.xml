@@ -50,7 +50,7 @@
         android:layout_height="40dp"
         android:layout_marginStart="10dp"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="100dp"
+        app:cardCornerRadius="25dp"
         app:cardElevation="5dp"
         app:layout_constraintBottom_toTopOf="@+id/divider7"
         app:layout_constraintStart_toEndOf="@+id/borderWrong"

@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,7 +21,6 @@ import com.dlpruniqe.beststatus.databinding.MystatusListItemBinding;
 import com.dlpruniqe.beststatus.models.MyStatusModels;
 import com.dlpruniqe.beststatus.other.CToast;
 import com.dlpruniqe.beststatus.other.GetAllGradient;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -33,14 +33,16 @@ public class MyStatusAdapter extends RecyclerView.Adapter<MyStatusAdapter.status
     private DeleteOrNotdeleteLayoutBinding deleteBinding;
     MystatusEditLayoutBinding editBind;
     AlertDialog editdialog;
+    private TextView noData;
 
-    public MyStatusAdapter(Context context, ArrayList<MyStatusModels> modelsList, AlertDialog dialog, DeleteOrNotdeleteLayoutBinding deleteBinding, MystatusEditLayoutBinding editBind, AlertDialog editdialog) {
+    public MyStatusAdapter(Context context, ArrayList<MyStatusModels> modelsList, AlertDialog dialog, DeleteOrNotdeleteLayoutBinding deleteBinding, MystatusEditLayoutBinding editBind, AlertDialog editdialog, TextView textnoDATA) {
         this.context = context;
         this.modelsList = modelsList;
         this.dDialog = dialog;
         this.deleteBinding = deleteBinding;
         this.editBind = editBind;
         this.editdialog = editdialog;
+        this.noData = textnoDATA;
     }
 
     @NonNull
@@ -86,12 +88,17 @@ public class MyStatusAdapter extends RecyclerView.Adapter<MyStatusAdapter.status
                     public void onClick(View v) {
                         SQlHelper dsQlHelper = new SQlHelper(context);
                         dsQlHelper.deleteStatus(String.valueOf(models.getId()));
+                        modelsList.remove(position);
+                        if (modelsList.size() == 0){
+                            noData.setVisibility(View.VISIBLE);
+                        }
                         CToast cToast = new CToast(context);
                         cToast.setText("Successfully Deleted");
                         cToast.iconVisible(true);
                         cToast.setIcon(R.drawable.icon_right);
                         cToast.show();
                         dDialog.dismiss();
+                        notifyDataSetChanged();
                     }
                 });
             }

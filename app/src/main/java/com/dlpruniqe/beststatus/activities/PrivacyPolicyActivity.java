@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import com.dlpruniqe.beststatus.R;
 
 public class PrivacyPolicyActivity extends AppCompatActivity {
@@ -16,6 +20,8 @@ public class PrivacyPolicyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_privacy_policy);
         WebView webView = findViewById(R.id.pwebView);
+        ProgressBar wprogressBar = findViewById(R.id.wProgressbar);
+        ImageView pbackarrow = findViewById(R.id.idprivacyarrow);
         pparent = findViewById(R.id.pparent);
 
         themesettingsharedprefrencechack();
@@ -24,6 +30,23 @@ public class PrivacyPolicyActivity extends AppCompatActivity {
         webView.loadUrl(privacyUrl);
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(false);
+
+        webView.setWebViewClient(new WebViewClient(){
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+                wprogressBar.setVisibility(View.GONE);
+            }
+        });
+
+        pbackarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
     }
 
     private void themesettingsharedprefrencechack(){

@@ -1,6 +1,5 @@
 package com.dlpruniqe.beststatus.activities;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.Manifest;
 import android.content.ClipData;
@@ -19,12 +18,6 @@ import android.widget.Toast;
 import com.dlpruniqe.beststatus.R;
 import com.dlpruniqe.beststatus.databinding.ActivityStatusDownloadBinding;
 import com.dlpruniqe.beststatus.databinding.ToastLayoutBinding;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
@@ -43,6 +36,8 @@ public class StatusDownloadActivity extends AppCompatActivity {
     private ActivityStatusDownloadBinding binding;
     private String poetryName;
     private Uri shareUri;
+    private Uri realImageUri;
+    private Bitmap bitmapImage;
     private ToastLayoutBinding toastBinding;
     private boolean isSaved = true;
     private String gettheme;
@@ -53,21 +48,14 @@ public class StatusDownloadActivity extends AppCompatActivity {
         binding = ActivityStatusDownloadBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        MobileAds.initialize(this);
-        AdView dadView = findViewById(R.id.dadView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        dadView.loadAd(adRequest);
-
-        loadinterstitialads();
-
         chackReadWritepermissions();
         getsharedprefrence();
         themesettingsharedprefrencechack();
 
         Intent intent = getIntent();
         poetryName = intent.getStringExtra("poetryname");
-        Uri imageuri = Uri.parse(intent.getExtras().getString("imageuri"));
-        binding.downloadImage.setImageURI(imageuri);
+        realImageUri = intent.getParcelableExtra("imageuri");
+        binding.downloadImage.setImageURI(realImageUri);
 
         toastBinding = ToastLayoutBinding.inflate(getLayoutInflater());
         binding.bottomLayout.setVisibility(View.VISIBLE);
@@ -79,9 +67,13 @@ public class StatusDownloadActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 binding.bottomLayout.setVisibility(View.GONE);
-                BitmapDrawable bitmapDrawable = (BitmapDrawable) binding.downloadImage.getDrawable();
-                Bitmap shareImage = bitmapDrawable.getBitmap();
-                String bitmapPath = MediaStore.Images.Media.insertImage(getContentResolver(),shareImage,"share",null);
+                try {
+                    bitmapImage = MediaStore.Images.Media.getBitmap(getContentResolver(), realImageUri);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                String bitmapPath = MediaStore.Images.Media.insertImage(getContentResolver(), bitmapImage,"share",null);
                 shareUri = Uri.parse(bitmapPath);
                 shareimageMethod();
                 binding.bottomLayout.setVisibility(View.VISIBLE);
@@ -247,23 +239,5 @@ public class StatusDownloadActivity extends AppCompatActivity {
         gettheme = getshared.getString(getString(R.string.backroundKey), "theme1");
     }
 
-    private void loadinterstitialads() {
-        AdRequest adRequest = new AdRequest.Builder().build();
-        InterstitialAd.load(this, getString(R.string.interestialAds), adRequest,
-                new InterstitialAdLoadCallback() {
-                    @Override
-                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                        // The mInterstitialAd reference will be null until
-                        // an ad is loaded.
-                        interstitialAd.show(StatusDownloadActivity.this);
-                    }
-
-                    @Override
-                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                        // Handle the error
-                        Toast.makeText(StatusDownloadActivity.this, loadAdError.toString(), Toast.LENGTH_SHORT).show();
-                    }
-                });
-    }
 
 }

@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">MS Status</string>
+    <string name="app_name">MS Shayari</string>
+
     <string name="langhindi">hindi</string>
     <string name="langenglish">english</string>
 
@@ -34,7 +35,7 @@
     <string name="ismystatus">ismystatus</string>
     <string name="mystatustext">ismystatustext</string>
     <string name="playstorelink">https://play.google.com/store/apps/details?id=</string>
-    <string name="sharetext">Download this App 👇👇👇\nbest Status App \nYou can create any Status \n \n</string>
+    <string name="sharetext">Download this App 👇👇👇\nbest Shayari App \nYou can create any Shayari with Background \n \n</string>
     <string name="my_status">My Status</string>
     <string name="no_status_found">No Status Found</string>
     <string name="copy">Copy</string>
@@ -64,10 +65,6 @@
     <string name="best_poetry_in_english">Best Poetry in English</string>
     <string name="home">Home</string>
     <string name="others">Others</string>
-
-    <string name="bannerAds">ca-app-pub-6994068342680045/4424470401</string>
-    <string name="interestialAds">ca-app-pub-6994068342680045/1606735373</string>
-    <string name="rewardedAds">ca-app-pub-6994068342680045/9541065715</string>
 
     <string name="social_media">Social Media</string>
     <string name="share_cap">share</string>

@@ -1,30 +1,18 @@
 package com.dlpruniqe.beststatus.activities;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Toast;
-
 import com.dlpruniqe.beststatus.R;
 import com.dlpruniqe.beststatus.databinding.ActivitySettingBinding;
 import com.dlpruniqe.beststatus.databinding.ProgressLayoutBinding;
 import com.dlpruniqe.beststatus.other.CToast;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.OnUserEarnedRewardListener;
-import com.google.android.gms.ads.rewarded.RewardItem;
-import com.google.android.gms.ads.rewarded.RewardedAd;
-import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 
 public class SettingActivity extends AppCompatActivity {
     private ActivitySettingBinding binding;
@@ -32,8 +20,8 @@ public class SettingActivity extends AppCompatActivity {
     private boolean isfontopenable;
     private boolean islanguageopenable;
     private String gettheme;
-    AlertDialog loaddialog;
-    ProgressLayoutBinding progbinding;
+    private AlertDialog loaddialog;
+    private ProgressLayoutBinding progbinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,12 +35,6 @@ public class SettingActivity extends AppCompatActivity {
         .setView(progbinding.getRoot())
         .setCancelable(false).create();
         loaddialog.getWindow().setBackgroundDrawableResource(R.color.transparent);
-
-        MobileAds.initialize(this);
-
-        AdView sadView = findViewById(R.id.sadView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        sadView.loadAd(adRequest);
 
         binding.idsetbackarrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,7 +99,7 @@ public class SettingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!gettheme.equals("theme1")){
                     gettheme = "theme1";
-                    loadvideorewarded();
+                    themeChangedwork();
                 }
 
             }
@@ -127,7 +109,7 @@ public class SettingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!gettheme.equals("theme2")){
                     gettheme = "theme2";
-                    loadvideorewarded();
+                    themeChangedwork();
                 }
 
             }
@@ -137,7 +119,7 @@ public class SettingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!gettheme.equals("theme3")){
                     gettheme = "theme3";
-                    loadvideorewarded();
+                    themeChangedwork();
                 }
 
             }
@@ -147,7 +129,7 @@ public class SettingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!gettheme.equals("theme4")){
                     gettheme = "theme4";
-                    loadvideorewarded();
+                    themeChangedwork();
                 }
 
             }
@@ -157,7 +139,7 @@ public class SettingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!gettheme.equals("theme5")){
                     gettheme = "theme5";
-                    loadvideorewarded();
+                    themeChangedwork();
                 }
 
             }
@@ -167,7 +149,7 @@ public class SettingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!gettheme.equals("theme6")){
                     gettheme = "theme6";
-                    loadvideorewarded();
+                    themeChangedwork();
                 }
 
             }
@@ -177,7 +159,7 @@ public class SettingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!gettheme.equals("theme7")){
                     gettheme = "theme7";
-                    loadvideorewarded();
+                    themeChangedwork();
                 }
 
             }
@@ -187,7 +169,7 @@ public class SettingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!gettheme.equals("theme8")){
                     gettheme = "theme8";
-                    loadvideorewarded();
+                    themeChangedwork();
                 }
 
             }
@@ -197,7 +179,7 @@ public class SettingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!gettheme.equals("theme9")){
                     gettheme = "theme9";
-                    loadvideorewarded();
+                    themeChangedwork();
                 }
 
             }
@@ -584,34 +566,17 @@ public class SettingActivity extends AppCompatActivity {
         gettheme = getshared.getString(getString(R.string.backroundKey), "theme1");
     }
 
-    private void loadvideorewarded(){
-        loaddialog.show();
+    private void themeChangedwork(){
         SharedPreferences themepreef = getSharedPreferences(getString(R.string.dbTheme), MODE_PRIVATE);
         SharedPreferences.Editor editor = themepreef.edit();
 
-        AdRequest adRequest = new AdRequest.Builder().build();
-        RewardedAd.load(this, getString(R.string.rewardedAds),
-                adRequest, new RewardedAdLoadCallback() {
-                    @Override
-                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                        Toast.makeText(SettingActivity.this, "Internet Problem", Toast.LENGTH_SHORT).show();
-                        loaddialog.dismiss();
-                    }
-
-                    @Override
-                    public void onAdLoaded(@NonNull RewardedAd rewardedAd) {
-                        loaddialog.dismiss();
-
-                        rewardedAd.show(SettingActivity.this, new OnUserEarnedRewardListener() {
-                            @Override
-                            public void onUserEarnedReward(@NonNull RewardItem rewardItem) {
-                                CToast cToast = new CToast(SettingActivity.this);
-                                cToast.setText("Successfully Theme Changed");
-                                cToast.iconVisible(false);
-                                cToast.show();
-                                switch (gettheme){
-                                    case "theme1":
-                                        binding.parentLayout.setBackgroundResource(R.drawable.main_back);
+        CToast cToast = new CToast(SettingActivity.this);
+        cToast.setText("Successfully Theme Changed");
+        cToast.iconVisible(false);
+        cToast.show();
+        switch (gettheme){
+            case "theme1":
+                binding.parentLayout.setBackgroundResource(R.drawable.main_back);
                 binding.btnApply1.setVisibility(View.VISIBLE);
                 binding.setthemeback.setBackgroundResource(R.drawable.main_back);
 
@@ -627,10 +592,10 @@ public class SettingActivity extends AppCompatActivity {
                 editor.apply();
                 getWindow().setStatusBarColor(getResources().getColor(R.color.statuscolor1));
                 getWindow().setNavigationBarColor(getResources().getColor(R.color.navcolor1));
-                                        gettheme = "theme1";
-                                        break;
-                                    case "theme2":
-                                         binding.parentLayout.setBackgroundResource(R.drawable.backround_2);
+                gettheme = "theme1";
+                break;
+            case "theme2":
+                binding.parentLayout.setBackgroundResource(R.drawable.backround_2);
                 binding.btnApply2.setVisibility(View.VISIBLE);
                 binding.setthemeback.setBackgroundResource(R.drawable.backround_2);
 
@@ -646,10 +611,10 @@ public class SettingActivity extends AppCompatActivity {
                 editor.apply();
                 getWindow().setStatusBarColor(getResources().getColor(R.color.statuscolor2));
                 getWindow().setNavigationBarColor(getResources().getColor(R.color.navcolor2));
-                                        gettheme = "theme2";
-                                        break;
-                                    case "theme3":
-                                        binding.parentLayout.setBackgroundResource(R.drawable.backround_3);
+                gettheme = "theme2";
+                break;
+            case "theme3":
+                binding.parentLayout.setBackgroundResource(R.drawable.backround_3);
                 binding.btnAppy3.setVisibility(View.VISIBLE);
                 binding.setthemeback.setBackgroundResource(R.drawable.backround_3);
 
@@ -665,10 +630,10 @@ public class SettingActivity extends AppCompatActivity {
                 editor.apply();
                 getWindow().setStatusBarColor(getResources().getColor(R.color.statuscolor3));
                 getWindow().setNavigationBarColor(getResources().getColor(R.color.navcolor3));
-                                        gettheme = "theme3";
-                                        break;
-                                    case "theme4":
-                                        binding.parentLayout.setBackgroundResource(R.drawable.backround_4);
+                gettheme = "theme3";
+                break;
+            case "theme4":
+                binding.parentLayout.setBackgroundResource(R.drawable.backround_4);
                 binding.btnApply4.setVisibility(View.VISIBLE);
                 binding.setthemeback.setBackgroundResource(R.drawable.backround_4);
 
@@ -684,10 +649,10 @@ public class SettingActivity extends AppCompatActivity {
                 editor.apply();
                 getWindow().setStatusBarColor(getResources().getColor(R.color.statuscolor4));
                 getWindow().setNavigationBarColor(getResources().getColor(R.color.navcolor4));
-                                        gettheme = "theme4";
-                                        break;
-                                    case "theme5":
-                                        binding.parentLayout.setBackgroundResource(R.drawable.backround_5);
+                gettheme = "theme4";
+                break;
+            case "theme5":
+                binding.parentLayout.setBackgroundResource(R.drawable.backround_5);
                 binding.btnApply5.setVisibility(View.VISIBLE);
                 binding.setthemeback.setBackgroundResource(R.drawable.backround_5);
 
@@ -703,10 +668,10 @@ public class SettingActivity extends AppCompatActivity {
                 editor.apply();
                 getWindow().setStatusBarColor(getResources().getColor(R.color.statuscolor5));
                 getWindow().setNavigationBarColor(getResources().getColor(R.color.navcolor5));
-                                        gettheme = "theme5";
-                                        break;
-                                    case "theme6":
-                                        binding.parentLayout.setBackgroundResource(R.drawable.backround_6);
+                gettheme = "theme5";
+                break;
+            case "theme6":
+                binding.parentLayout.setBackgroundResource(R.drawable.backround_6);
                 binding.btnApply6.setVisibility(View.VISIBLE);
                 binding.setthemeback.setBackgroundResource(R.drawable.backround_6);
 
@@ -722,10 +687,10 @@ public class SettingActivity extends AppCompatActivity {
                 editor.apply();
                 getWindow().setStatusBarColor(getResources().getColor(R.color.statuscolor6));
                 getWindow().setNavigationBarColor(getResources().getColor(R.color.navcolor6));
-                                        gettheme = "theme6";
-                                        break;
-                                    case "theme7":
-                                         binding.parentLayout.setBackgroundResource(R.drawable.backround_7);
+                gettheme = "theme6";
+                break;
+            case "theme7":
+                binding.parentLayout.setBackgroundResource(R.drawable.backround_7);
                 binding.btnApply7.setVisibility(View.VISIBLE);
                 binding.setthemeback.setBackgroundResource(R.drawable.backround_7);
 
@@ -744,8 +709,8 @@ public class SettingActivity extends AppCompatActivity {
                 gettheme = "theme7";
                 break;
 
-                                    case "theme8":
-                                        binding.parentLayout.setBackgroundResource(R.drawable.backround_8);
+            case "theme8":
+                binding.parentLayout.setBackgroundResource(R.drawable.backround_8);
                 binding.btnApply8.setVisibility(View.VISIBLE);
                 binding.setthemeback.setBackgroundResource(R.drawable.backround_8);
 
@@ -762,9 +727,9 @@ public class SettingActivity extends AppCompatActivity {
                 getWindow().setStatusBarColor(getResources().getColor(R.color.statuscolor8));
                 getWindow().setNavigationBarColor(getResources().getColor(R.color.navcolor8));
                 gettheme = "theme8";
-                                        break;
-                                    case "theme9":
-                                        binding.parentLayout.setBackgroundResource(R.drawable.backround_9);
+                break;
+            case "theme9":
+                binding.parentLayout.setBackgroundResource(R.drawable.backround_9);
                 binding.btnApply9.setVisibility(View.VISIBLE);
                 binding.setthemeback.setBackgroundResource(R.drawable.backround_9);
 
@@ -780,14 +745,9 @@ public class SettingActivity extends AppCompatActivity {
                 editor.apply();
                 getWindow().setStatusBarColor(getResources().getColor(R.color.statuscolor9));
                 getWindow().setNavigationBarColor(getResources().getColor(R.color.navcolor9));
-                                        gettheme = "theme9";
-                                        break;
+                gettheme = "theme9";
+                break;
 
-                                }
-
-                            }
-                        });
-                    }
-                });
+        }
     }
 }

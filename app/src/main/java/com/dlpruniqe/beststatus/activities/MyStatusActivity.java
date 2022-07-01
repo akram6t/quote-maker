@@ -13,9 +13,6 @@ import com.dlpruniqe.beststatus.databinding.DeleteOrNotdeleteLayoutBinding;
 import com.dlpruniqe.beststatus.databinding.MystatusEditLayoutBinding;
 import com.dlpruniqe.beststatus.database.SQlHelper;
 import com.dlpruniqe.beststatus.databinding.ActivityMyStatusBinding;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 
 public class MyStatusActivity extends AppCompatActivity {
     private ActivityMyStatusBinding binding;
@@ -24,17 +21,13 @@ public class MyStatusActivity extends AppCompatActivity {
     private SQlHelper sQlHelper;
     private AlertDialog edialog;
     private MystatusEditLayoutBinding editBinding;
+    private MyStatusAdapter myAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMyStatusBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        MobileAds.initialize(MyStatusActivity.this);
-        AdView msAdView = findViewById(R.id.msadView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        msAdView.loadAd(adRequest);
 
         themesettingsharedprefrencechack();
         deletealertdialogcreate();
@@ -101,7 +94,7 @@ public class MyStatusActivity extends AppCompatActivity {
         if (!sQlHelper.readStatusList().isEmpty()){
             binding.textnodata.setVisibility(View.GONE);
         }
-        MyStatusAdapter myAdapter = new MyStatusAdapter(MyStatusActivity.this, sQlHelper.readStatusList(), ddialog, deleteBinding, editBinding, edialog);
+        myAdapter = new MyStatusAdapter(MyStatusActivity.this, sQlHelper.readStatusList(), ddialog, deleteBinding, editBinding, edialog, binding.textnodata);
         binding.statusrecycler.setAdapter(myAdapter);
         LinearLayoutManager slm = new LinearLayoutManager(MyStatusActivity.this);
         binding.statusrecycler.setLayoutManager(slm);
@@ -127,17 +120,6 @@ public class MyStatusActivity extends AppCompatActivity {
         deleteBinding.dTitle.setText(getString(R.string.delete_layout_title));
         deleteBinding.dMessage.setText(getString(R.string.delete_layout_message));
         ddialog.getWindow().setBackgroundDrawableResource(R.color.transparent);
-
-        ddialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
-            @Override
-            public void onDismiss(DialogInterface dialog) {
-
-                if (sQlHelper.readStatusList().isEmpty()){
-                    binding.textnodata.setVisibility(View.VISIBLE);
-                }
-                getsqllitedata();
-            }
-        });
     }
 
     private void editalertdialogcreate(){

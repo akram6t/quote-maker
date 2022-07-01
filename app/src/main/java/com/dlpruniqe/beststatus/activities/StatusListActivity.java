@@ -1,33 +1,17 @@
 package com.dlpruniqe.beststatus.activities;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
-import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
-
 import com.dlpruniqe.beststatus.R;
 import com.dlpruniqe.beststatus.adapters.PoetryListAdapters;
 import com.dlpruniqe.beststatus.databinding.ActivityStatusListBinding;
 import com.dlpruniqe.beststatus.models.PoetryListModels;
 import com.dlpruniqe.beststatus.other.GetAllGradient;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.FullScreenContentCallback;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.OnPaidEventListener;
-import com.google.android.gms.ads.ResponseInfo;
-import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -45,18 +29,12 @@ public class StatusListActivity extends AppCompatActivity {
     private String assetspath;
     private String gettheme;
     private String statusType = "";
-    private InterstitialAd minterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityStatusListBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        MobileAds.initialize(this);
-        AdView ladView = findViewById(R.id.ladView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        ladView.loadAd(adRequest);
 
         getsharedprefrence();
         themesettingsharedprefrencechack();
